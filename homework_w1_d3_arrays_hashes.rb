@@ -31,9 +31,9 @@ stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Ha
 # 9. Reverse the positions of the stops in the array
 # p stops.reverse()
 # 10. Print out all the stops using a for loop
-for stop_name in stops
-  p stop_name
-end
+# for stop_name in stops
+#   p stop_name
+# end
 
 
 ## B. Given the following data structure:
@@ -71,14 +71,35 @@ end
   }
 
 # 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
-# 2. Get Erik's hometown
-# 3. Get the array of Erik's favourite numbers
-# 4. Get the type of Avril's pet Colin
-# 5. Get the smallest of Erik's favourite numbers
-# 6. Add the number `7` to Erik's favourite numbers
-# 7. Change Erik's hometown to Edinburgh
+# p users["Jonathan"][:twitter]
+# # 2. Get Erik's hometown
+# p users["Erik"][:home_town]
+# # 3. Get the array of Erik's favourite numbers
+# p users["Erik"][:favourite_numbers]
+# # 4. Get the type of Avril's pet Colin
+# p users["Avril"][:pets]["colin"]
+# # 5. Get the smallest of Erik's favourite numbers
+# p users["Erik"][:favourite_numbers][0]
+# # 6. Add the number `7` to Erik's favourite numbers
+# users["Erik"][:favourite_numbers].push(7)
+# p users["Erik"]
+# # 7. Change Erik's hometown to Edinburgh
+# users["Erik"][:home_town] = "Edinburgh"
+# p users["Erik"]
 # 8. Add a pet dog to Erik called "Fluffy"
+# users["Erik"][:pets]["fluffy"] = :dog
+# p users["Erik"]
 # 9. Add yourself to the users hash
+users["Alison"] = {
+        :twitter => "alisonwood29",
+        :favourite_numbers => [2, 29, 42],
+        :home_town => "Edinburgh",
+        :pets => {
+          "skye" => :dog,
+          "sparkles" => :fish
+        }
+}
+p users
 
 # C. Given the following data structure:
 
